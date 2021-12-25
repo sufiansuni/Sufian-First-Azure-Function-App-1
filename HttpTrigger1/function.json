@@ -17,10 +17,11 @@
       "name": "$return"
     },
     {
-      "type": "queue",
-      "direction": "out",
-      "name": "msg",
-      "queueName": "outqueue",
+      "type": "blob",
+      "direction": "in",
+      "name": "commentsFile",
+      "dataType": "string",
+      "path": "comments/comments.json",
       "connection": "AzureWebJobsStorage"
     }
   ]
