@@ -1,4 +1,4 @@
-# Sufian-First-Azure-Function-App
+# My First Azure Function App
 
 ## Approach / Breakdown
 Create 2 Endpoints
@@ -48,13 +48,13 @@ Create 2 Endpoints
 
 
 ## References
-Function App Quick-start (Python)  
+Function App Quick-Start (Python)  
 https://docs.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-python
 
 Connect to Azure Functions to Azure Storage  
 https://docs.microsoft.com/en-us/azure/azure-functions/functions-add-output-binding-storage-queue-vs-code?pivots=programming-language-python&tabs=in-process
 
-Azure Blob storage input binding for Azure Functions  
+Azure Blob Storage Input binding for Azure Functions  
 https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-storage-blob-input?tabs=python
 
 Triggers and Bindings  
