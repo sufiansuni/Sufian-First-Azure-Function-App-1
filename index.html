@@ -8,12 +8,12 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     </head>
     <body>
-        <div class="container">
+        <div id="page-content" class="container">
             <div class="sticky-top" style="background-color: white;">
                 <h1 class="text-center">Sufian's First Azure Function App</h1>
                 <a class="btn btn-primary btn-block" href="https://sufianfirstazurefunctio2.blob.core.windows.net/comments/comments.json" target="_blank">1st Endpoint: Static Website</a>
                 <a class="btn btn-secondary btn-block" href="https://sufianfirstazurefunctionapp.azurewebsites.net/api/httptrigger1" target="_blank">2nd Endpoint: Function App</a>
-                <h2 v-text="commentsHeader"  class="text-center py-3">Loading Comments...</h2>
+                <h2 v-text="commentsHeader"  class="text-center py-3"></h2>
             </div>
             <div id="comments-container" class="list-group">
 
