@@ -23,7 +23,7 @@ const CommentsApp = {
         }
     },
     computed: {
-        maxIndex() {
+        maxPage() {
             return Math.ceil(this.comments.length/this.commentsPerPage);
         }
     }
