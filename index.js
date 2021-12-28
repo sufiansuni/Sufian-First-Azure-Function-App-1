@@ -5,7 +5,9 @@ const CommentsApp = {
     data() {
         return {
             commentsHeader: "Loading Comments...",
-            comments: []
+            comments: [],
+            commentsPerPage: 10,
+            currentPage: 1
         };
     },
     methods: {
@@ -20,6 +22,11 @@ const CommentsApp = {
             }
         }
     },
+    computed: {
+        maxIndex() {
+            return Math.ceil(this.comments.length/this.commentsPerPage);
+        }
+    }
 };
 
 Vue.createApp(CommentsApp).mount('#page-content');

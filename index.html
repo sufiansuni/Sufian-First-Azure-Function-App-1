@@ -14,10 +14,34 @@
                 <a class="btn btn-primary btn-block" href="https://sufianfirstazurefunctio2.blob.core.windows.net/comments/comments.json" target="_blank">1st Endpoint: Static Website</a>
                 <a class="btn btn-secondary btn-block" href="https://sufianfirstazurefunctionapp.azurewebsites.net/api/httptrigger1" target="_blank">2nd Endpoint: Function App</a>
                 <h2 v-text="commentsHeader"  class="text-center py-3"></h2>
+                <div v-show="comments.length > 0">
+                    <form class="form-inline d-flex justify-content-center align-items-center pb-2">
+                        <div class="form-group">
+                            <label class="mr-2" for="page-number">Page</label>
+                            <input v-model="currentPage" type="number" name="page-number" min="1" :max="maxIndex">
+                        </div>
+                        <div class="mx-2">
+                            Comments Per Page:
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input v-model="commentsPerPage" class="form-check-input" type="radio" name="commentsPerPageOptions" id="commentsPerPage10" value="10">
+                            <label class="form-check-label" for="commentsPerPage10">10</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input v-model="commentsPerPage" class="form-check-input" type="radio" name="commentsPerPageOptions" id="commentsPerPage25" value="25">
+                            <label class="form-check-label" for="commentsPerPage25">25</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input v-model="commentsPerPage" class="form-check-input" type="radio" name="commentsPerPageOptions" id="commentsPerPage50" value="50">
+                            <label class="form-check-label" for="commentsPerPage50">50</label>
+                        </div>
+                    </form>
+                </div>
             </div>
+
             <div id="comments-container" class="list-group">
 
-                <div v-for="comment in comments" class="comment list-group-item">
+                <div v-for="comment, index in comments" v-show="(index >= (currentPage-1)*commentsPerPage) && (index <= ((currentPage*commentsPerPage) - 1))" class="comment list-group-item">
                     <h4 v-text="comment.name"></h4>
                     <div class="email">
                         <a v-text="comment.email" :href="'mailto:' + comment.email"></a>
