@@ -41,7 +41,7 @@
 
             <div id="comments-container" class="list-group">
 
-                <div v-for="comment, index in comments" v-show="(index >= (currentPage-1)*commentsPerPage) && (index <= ((currentPage*commentsPerPage) - 1))" class="comment list-group-item">
+                <div v-for="comment, index in comments" v-show="(index >= (currentPage-1)*commentsPerPage) && (index <= ((currentPage*commentsPerPage) - 1))" class="comment list-group-item border">
                     <h4 v-text="comment.name"></h4>
                     <div class="email">
                         <a v-text="comment.email" :href="'mailto:' + comment.email"></a>
