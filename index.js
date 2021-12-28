@@ -8,23 +8,17 @@ async function getComments() {
     }
 }
 
-async function renderComments() {
+async function createCommentsApp() {
     let comments = await getComments();
-    let html = '';
-    comments.forEach(comment => {
-        let htmlSegment =   `<div class="comment list-group-item">
-                                <h4>${comment.name}</h4>
-                                <div class="email">
-                                    <a href="mailto:${comment.email}">${comment.email}</a>
-                                </div>
-                                <p>${comment.body}</p>
-                            </div>`;
-
-        html += htmlSegment;
-    });
-
-    let container = document.querySelector('#comments-container');
-    container.innerHTML = html;
+    const CommentsApp = {
+        data() {
+            return {
+                commentsHeader: "All Comments",
+                comments
+            };
+        }
+    };
+    Vue.createApp(CommentsApp).mount('body')
 }
 
-renderComments();
+createCommentsApp();
