@@ -1,5 +1,13 @@
 # My First Azure Function App
 
+# Deployments
+Github Pages  
+https://sufiansuni.github.io/Sufian-First-Azure-Function-App/  
+
+Azure Static Website  
+https://sufianfirstazurefunctio2.z13.web.core.windows.net/
+
+
 ## Approach / Breakdown
 Create 2 Endpoints
 - First Endpoint: 
