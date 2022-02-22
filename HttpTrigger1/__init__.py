@@ -21,10 +21,11 @@ def main(req: func.HttpRequest, commentsFile: str) -> str:
     sample_secret = keyvault_secret_client.get_secret("SampleKey").value
 
     # print(sample_secret)
+    test_secret = os.getenv("SampleKey")
     
     return func.HttpResponse(
-        body = commentsFile, 
+        body = test_secret, 
         headers = {
-            "Content-Type" : "application/json"
+            "Content-Type" : "text/html"
         }
     )
