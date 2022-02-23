@@ -4,5 +4,6 @@
   "azureFunctions.pythonVenv": ".venv",
   "azureFunctions.projectLanguage": "Python",
   "azureFunctions.projectRuntime": "~4",
-  "debug.internalConsoleOptions": "neverOpen"
+  "debug.internalConsoleOptions": "neverOpen",
+  "azure.tenant": "0f9396a7-cb4d-47ee-be8e-1a0bccd64ecb"
 }
