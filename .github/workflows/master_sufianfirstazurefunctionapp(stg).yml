@@ -77,7 +77,7 @@ jobs:
           # Format of the configuration file. Valid values are: json, yaml, properties
           format: json
           # Connection string for the App Configuration instance
-          connectionString: ${{ secrets.<ConnectionString> }}
+          connectionString: ${{ secrets.AZURE_CONNECTION_STRING }}
           # Separator used when flattening the configuration file to key-value pairs
           separator: ':'
           # Specifies whether to use a strict sync which will make the App Configuration instance exactly match the configuration file (deleting key-values not in the configuration file). Defaults to false
